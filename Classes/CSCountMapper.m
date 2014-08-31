@@ -13,7 +13,7 @@
 + (NSNumber *)transformValue:(NSArray *)inputValue {
 	NSAssert([inputValue isKindOfClass:[NSArray class]], @"Input Value needs to be Array");
 	
-	return [NSNumber numberWithUnsignedInt:[inputValue count]];
+	return [NSNumber numberWithUnsignedLong:[inputValue count]];
 }
 
 @end
