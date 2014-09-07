@@ -262,6 +262,10 @@ static NSMutableDictionary *mappingCache = NULL;
  */
 - (NSString *)NSStringValue {
 	if ([self isKindOfClass:[NSObject class]]) {
+        if ([self isKindOfClass:[NSNull class]]) {
+            return nil;
+        }
+        
 		NSString *retval = [NSString stringWithFormat:@"%@", self];
 		
 		return retval;
